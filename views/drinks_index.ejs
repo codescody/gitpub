@@ -5,12 +5,22 @@
     <title>gitPub</title>
   </head>
   <body>
-    <h1>Welcome to gitPub</h1>
     <style type="text/css">
-        body {
-          color: blanchedalmond;
-          background-color: steelblue;
-        }
+      body {
+        color: blanchedalmond;
+        background-color: steelblue;
+        text-transform: capitalize;
+      }
     </style>
+    <h1>Welcome to gitPub</h1>
+    
+    <ul>
+        <% for(let i = 0; i < allDrinks.length; i++) { %>
+        <li>
+            <a href="/drinks/<%= i %>"> <%= allDrinks[i].name %></a>
+        </li>
+        <% } %>
+    </ul> 
+    
   </body>
 </html>
